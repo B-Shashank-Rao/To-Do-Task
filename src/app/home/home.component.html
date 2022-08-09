@@ -1,0 +1,29 @@
+<div class ="container bg-primary text-white d-flex  p-4">
+    <div class = "col">
+        <p>Add To-Do Project</p>
+    </div>
+
+    <div class = "col-6 col-sm-3">
+        <p>To-do List {{itemNumber}} </p>
+    </div>
+</div>
+<div class ="container bg-info text-black d-flex p-4 ">
+    <div class = "col">
+        <h2>Add your project title here</h2>
+        <form>
+            <input type ="text" placeholder="Enter the Project to Add " [(ngModel)]="projectText" [ngModelOptions]="{standalone: true}" />
+            <br>
+            <br>
+            <button class = "btn btn-primary" type ="button" (click)="add()">Add project task</button>
+        </form>
+    </div>
+
+    <br>
+
+    <div class ="col-6 col-sm-3">
+        <h2>Project List</h2>
+        <p *ngFor="let i of projects">{{i}}</p>
+    </div>
+</div>
+
+
